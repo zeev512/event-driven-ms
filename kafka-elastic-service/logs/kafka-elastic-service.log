@@ -1,0 +1,600 @@
+2021-10-20 20:01:15 [main] INFO  i.c.m.i.k.KafkaElasticServiceApplication - Starting KafkaElasticServiceApplication using Java 11.0.12 on localhost.localdomain with PID 251285 (/home/zeev/workspaces/k8s/zeev/aligelenler/event-driven-ms/kafka-elastic-service/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/event-driven-ms)
+2021-10-20 20:01:15 [main] INFO  i.c.m.i.k.KafkaElasticServiceApplication - The following profiles are active: kafka_elastic
+2021-10-20 20:01:15 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://localhost:8888
+2021-10-20 20:01:15 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=kafka-elastic-service,config-client, profiles=[kafka_elastic], label=null, version=1053958640d9f6fad7d3b7816b9b059f39a331de, state=null
+2021-10-20 20:01:16 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=513304fd-a7df-31b6-a30d-eb937cdf149e
+2021-10-20 20:01:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-20 20:01:16 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-20 20:01:16 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2021-10-20 20:01:16 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2021-10-20 20:01:16 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1634749276397
+2021-10-20 20:01:16 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 379a97dc-6d8a-4a5f-b887-5261491fa15d
+
+2021-10-20 20:01:17 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8182
+2021-10-20 20:01:17 [main] INFO  i.c.m.i.k.KafkaElasticServiceApplication - Started KafkaElasticServiceApplication in 3.665 seconds (JVM running for 4.223)
+2021-10-20 20:01:17 [main] INFO  i.c.m.i.k.a.c.c.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
+2021-10-20 20:01:17 [main] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - Topic with name twitter-topic is ready for operations!
+2021-10-20 20:01:17 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-twitterTopicListener-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2021-10-20 20:01:17 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.token = [hidden]
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	proxy.host = 
+	proxy.port = -1
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.reader = true
+	use.latest.version = false
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1634749277371
+2021-10-20 20:01:17 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2021-10-20 20:01:17 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-twitterTopicListener-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2021-10-20 20:01:17 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.token = [hidden]
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	proxy.host = 
+	proxy.port = -1
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.reader = true
+	use.latest.version = false
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1634749277397
+2021-10-20 20:01:17 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2021-10-20 20:01:17 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-twitterTopicListener-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2021-10-20 20:01:17 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.token = [hidden]
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	proxy.host = 
+	proxy.port = -1
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.reader = true
+	use.latest.version = false
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-10-20 20:01:17 [twitterTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Cluster ID: x1ODeuaNT-e8SN3h56s79w
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.7.1
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 61dbce85d0d41457
+2021-10-20 20:01:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1634749277413
+2021-10-20 20:01:17 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2021-10-20 20:01:17 [twitterTopicListener-2-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Cluster ID: x1ODeuaNT-e8SN3h56s79w
+2021-10-20 20:01:17 [twitterTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Cluster ID: x1ODeuaNT-e8SN3h56s79w
+2021-10-20 20:01:20 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Discovered group coordinator localhost:39092 (id: 2147483644 rack: null)
+2021-10-20 20:01:20 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2021-10-20 20:01:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Discovered group coordinator localhost:39092 (id: 2147483644 rack: null)
+2021-10-20 20:01:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2021-10-20 20:01:20 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Discovered group coordinator localhost:39092 (id: 2147483644 rack: null)
+2021-10-20 20:01:20 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] (Re-)joining group
+2021-10-20 20:01:20 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2021-10-20 20:01:20 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] (Re-)joining group
+2021-10-20 20:01:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully joined group with generation Generation{generationId=1, memberId='consumer-twitterTopicListener-2-674cf716-6045-4b37-85fe-c66604280920', protocol='range'}
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully joined group with generation Generation{generationId=1, memberId='consumer-twitterTopicListener-1-df18b5c1-5c46-4ba0-beb4-4ac96cd83d1d', protocol='range'}
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Successfully joined group with generation Generation{generationId=1, memberId='consumer-twitterTopicListener-3-c4b7ba0f-3a2a-4a9c-8939-05eac2e06c93', protocol='range'}
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Finished assignment for group at generation 1: {consumer-twitterTopicListener-2-674cf716-6045-4b37-85fe-c66604280920=Assignment(partitions=[twitter-topic-1]), consumer-twitterTopicListener-1-df18b5c1-5c46-4ba0-beb4-4ac96cd83d1d=Assignment(partitions=[twitter-topic-0]), consumer-twitterTopicListener-3-c4b7ba0f-3a2a-4a9c-8939-05eac2e06c93=Assignment(partitions=[twitter-topic-2])}
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully synced group in generation Generation{generationId=1, memberId='consumer-twitterTopicListener-2-674cf716-6045-4b37-85fe-c66604280920', protocol='range'}
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully synced group in generation Generation{generationId=1, memberId='consumer-twitterTopicListener-1-df18b5c1-5c46-4ba0-beb4-4ac96cd83d1d', protocol='range'}
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Successfully synced group in generation Generation{generationId=1, memberId='consumer-twitterTopicListener-3-c4b7ba0f-3a2a-4a9c-8939-05eac2e06c93', protocol='range'}
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Notifying assignor about the new Assignment(partitions=[twitter-topic-2])
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Notifying assignor about the new Assignment(partitions=[twitter-topic-0])
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Notifying assignor about the new Assignment(partitions=[twitter-topic-1])
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-1
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-0
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-2
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-0
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-1
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-2
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 2 rack: null)], epoch=0}}.
+2021-10-20 20:01:26 [twitterTopicListener-2-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-2]
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:39092 (id: 3 rack: null)], epoch=0}}.
+2021-10-20 20:01:26 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-0]
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}.
+2021-10-20 20:01:26 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-1]
+2021-10-20 20:01:27 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 16 number of message received with keys [361627071, 1327015921538510850, 985425300292022273, 53895116, 1426744187676807170, 985425300292022273, 1131882651151994880, 45899723, 814531988652691458, 985425300292022273, 1729193269, 738752276836306944, 24386956, 1381245365257527300, 373953341, 1449416700101754892], partitions [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] and offsets [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], sending it to elastic: Thread id 28
+2021-10-20 20:01:27 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 9 number of message received with keys [1330350611796209666, 1300872547605512192, 1423655520196435969, 1300872547605512192, 1300872547605512192, 1300872547605512192, 1423655520196435969, 1300872547605512192, 1300872547605512192], partitions [0, 0, 0, 0, 0, 0, 0, 0, 0] and offsets [0, 1, 2, 3, 4, 5, 6, 7, 8], sending it to elastic: Thread id 26
+2021-10-20 20:01:27 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 10 number of message received with keys [14520320, 1157683646888894465, 1083388448789139456, 1403020350871400451, 1318682406, 2204989933, 1393877974416601089, 1199375299030462465, 1347396338581790723, 785537881842614272], partitions [2, 2, 2, 2, 2, 2, 2, 2, 2, 2] and offsets [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], sending it to elastic: Thread id 30
+2021-10-20 20:01:29 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1336432915941474305], partitions [0] and offsets [9], sending it to elastic: Thread id 26
+2021-10-20 20:01:33 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [415062992], partitions [0] and offsets [10], sending it to elastic: Thread id 26
+2021-10-20 20:01:35 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [99842715], partitions [2] and offsets [10], sending it to elastic: Thread id 30
+2021-10-20 20:01:37 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1364497572509880322], partitions [2] and offsets [11], sending it to elastic: Thread id 30
+2021-10-20 20:01:38 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [921587402132672512], partitions [1] and offsets [16], sending it to elastic: Thread id 28
+2021-10-20 20:01:45 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2894140492], partitions [0] and offsets [11], sending it to elastic: Thread id 26
+2021-10-20 20:01:45 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [861950124972400640], partitions [1] and offsets [17], sending it to elastic: Thread id 28
+2021-10-20 20:01:47 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [74188930], partitions [1] and offsets [18], sending it to elastic: Thread id 28
+2021-10-20 20:01:49 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1383761330352447491], partitions [2] and offsets [12], sending it to elastic: Thread id 30
+2021-10-20 20:01:50 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1380671890461614082], partitions [2] and offsets [13], sending it to elastic: Thread id 30
+2021-10-20 20:01:54 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1347396338581790723], partitions [2] and offsets [14], sending it to elastic: Thread id 30
+2021-10-20 20:01:59 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1312456746359717889], partitions [2] and offsets [15], sending it to elastic: Thread id 30
+2021-10-20 20:02:00 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1361887092083621891], partitions [0] and offsets [12], sending it to elastic: Thread id 26
+2021-10-20 20:02:03 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2269169039], partitions [0] and offsets [13], sending it to elastic: Thread id 26
+2021-10-20 20:02:03 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1423655520196435969], partitions [0] and offsets [14], sending it to elastic: Thread id 26
+2021-10-20 20:02:03 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1372682268259586049], partitions [2] and offsets [16], sending it to elastic: Thread id 30
+2021-10-20 20:02:06 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1437728609909706753], partitions [0] and offsets [15], sending it to elastic: Thread id 26
+2021-10-20 20:02:06 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2433651774], partitions [0] and offsets [16], sending it to elastic: Thread id 26
+2021-10-20 20:02:07 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2205070810], partitions [2] and offsets [17], sending it to elastic: Thread id 30
+2021-10-20 20:02:09 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2397566506], partitions [0] and offsets [17], sending it to elastic: Thread id 26
+2021-10-20 20:02:12 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [775180060861034496], partitions [1] and offsets [19], sending it to elastic: Thread id 28
+2021-10-20 20:02:13 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1371562175639207938], partitions [2] and offsets [18], sending it to elastic: Thread id 30
+2021-10-20 20:02:14 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [18], sending it to elastic: Thread id 26
+2021-10-20 20:02:16 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1643533056], partitions [1] and offsets [20], sending it to elastic: Thread id 28
+2021-10-20 20:02:17 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [871787588239208448], partitions [0] and offsets [19], sending it to elastic: Thread id 26
+2021-10-20 20:02:26 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1295329929685499907], partitions [1] and offsets [21], sending it to elastic: Thread id 28
+2021-10-20 20:02:28 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1449406203096756234], partitions [2] and offsets [19], sending it to elastic: Thread id 30
+2021-10-20 20:02:28 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [20], sending it to elastic: Thread id 26
+2021-10-20 20:02:31 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1330350611796209666], partitions [0] and offsets [21], sending it to elastic: Thread id 26
+2021-10-20 20:02:39 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1447909184343773184], partitions [0] and offsets [22], sending it to elastic: Thread id 26
+2021-10-20 20:02:41 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1004337854711918592], partitions [1] and offsets [22], sending it to elastic: Thread id 28
+2021-10-20 20:02:41 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1314164146934513665], partitions [0] and offsets [23], sending it to elastic: Thread id 26
+2021-10-20 20:02:42 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [24], sending it to elastic: Thread id 26
+2021-10-20 20:02:42 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1447909184343773184], partitions [0] and offsets [25], sending it to elastic: Thread id 26
+2021-10-20 20:02:50 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1229424723416797184], partitions [1] and offsets [23], sending it to elastic: Thread id 28
+2021-10-20 20:02:51 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1127829883013361665], partitions [0] and offsets [26], sending it to elastic: Thread id 26
+2021-10-20 20:02:52 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [27], sending it to elastic: Thread id 26
+2021-10-20 20:02:53 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [3415585210], partitions [2] and offsets [20], sending it to elastic: Thread id 30
+2021-10-20 20:02:55 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [3966981], partitions [1] and offsets [24], sending it to elastic: Thread id 28
+2021-10-20 20:02:55 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1250164632968298497], partitions [1] and offsets [25], sending it to elastic: Thread id 28
+2021-10-20 20:02:57 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [376341431], partitions [2] and offsets [21], sending it to elastic: Thread id 30
+2021-10-20 20:02:57 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1448508039053529089], partitions [0] and offsets [28], sending it to elastic: Thread id 26
+2021-10-20 20:02:57 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1364497572509880322], partitions [2] and offsets [22], sending it to elastic: Thread id 30
+2021-10-20 20:03:02 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [18337218], partitions [0] and offsets [29], sending it to elastic: Thread id 26
+2021-10-20 20:03:02 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1298357606466097152], partitions [2] and offsets [23], sending it to elastic: Thread id 30
+2021-10-20 20:03:04 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1423655520196435969], partitions [0] and offsets [30], sending it to elastic: Thread id 26
+2021-10-20 20:03:04 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [31], sending it to elastic: Thread id 26
+2021-10-20 20:03:06 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [16864630], partitions [1] and offsets [26], sending it to elastic: Thread id 28
+2021-10-20 20:03:07 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1375961552122044417], partitions [2] and offsets [24], sending it to elastic: Thread id 30
+2021-10-20 20:03:08 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1253050714454097920], partitions [0] and offsets [32], sending it to elastic: Thread id 26
+2021-10-20 20:03:08 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1729193269], partitions [1] and offsets [27], sending it to elastic: Thread id 28
+2021-10-20 20:03:09 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1310836644946145286, 1310836644946145286], partitions [1, 1] and offsets [28, 29], sending it to elastic: Thread id 28
+2021-10-20 20:03:10 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [33], sending it to elastic: Thread id 26
+2021-10-20 20:03:17 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1403020350871400451], partitions [2] and offsets [25], sending it to elastic: Thread id 30
+2021-10-20 20:03:19 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1258829560700792833], partitions [0] and offsets [34], sending it to elastic: Thread id 26
+2021-10-20 20:03:21 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1270418858], partitions [1] and offsets [30], sending it to elastic: Thread id 28
+2021-10-20 20:03:25 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1348935975343415297], partitions [2] and offsets [26], sending it to elastic: Thread id 30
+2021-10-20 20:03:27 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1347396338581790723], partitions [2] and offsets [27], sending it to elastic: Thread id 30
+2021-10-20 20:03:31 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1300872547605512192], partitions [0] and offsets [35], sending it to elastic: Thread id 26
+2021-10-20 20:03:31 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1127829883013361665], partitions [0] and offsets [36], sending it to elastic: Thread id 26
+2021-10-20 20:03:34 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1581119996], partitions [2] and offsets [28], sending it to elastic: Thread id 30
+2021-10-20 20:03:34 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1319275333661585409], partitions [1] and offsets [31], sending it to elastic: Thread id 28
+2021-10-20 20:03:34 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1423655520196435969], partitions [0] and offsets [37], sending it to elastic: Thread id 26
+2021-10-20 20:03:38 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1364497572509880322], partitions [2] and offsets [29], sending it to elastic: Thread id 30
+2021-10-20 20:03:38 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [3966981], partitions [1] and offsets [32], sending it to elastic: Thread id 28
+2021-10-20 20:03:38 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1071130857534963712], partitions [2] and offsets [30], sending it to elastic: Thread id 30
+2021-10-20 20:03:40 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1246308773263622144], partitions [1] and offsets [33], sending it to elastic: Thread id 28
+2021-10-20 20:03:40 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [79440788], partitions [0] and offsets [38], sending it to elastic: Thread id 26
+2021-10-20 20:03:43 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1450712341545308163], partitions [2] and offsets [31], sending it to elastic: Thread id 30
+2021-10-20 20:03:45 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [56530362], partitions [0] and offsets [39], sending it to elastic: Thread id 26
+2021-10-20 20:03:48 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1729193269], partitions [1] and offsets [34], sending it to elastic: Thread id 28
+2021-10-20 20:03:50 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [30257885], partitions [0] and offsets [40], sending it to elastic: Thread id 26
+2021-10-20 20:03:52 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [4415988254], partitions [0] and offsets [41], sending it to elastic: Thread id 26
+2021-10-20 20:03:54 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1419318706081910787], partitions [1] and offsets [35], sending it to elastic: Thread id 28
+2021-10-20 20:03:55 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1411992337245298688], partitions [2] and offsets [32], sending it to elastic: Thread id 30
+2021-10-20 20:04:02 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1354387870778339334], partitions [2] and offsets [33], sending it to elastic: Thread id 30
+2021-10-20 20:04:03 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [14255325], partitions [1] and offsets [36], sending it to elastic: Thread id 28
+2021-10-20 20:04:06 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2378535942], partitions [1] and offsets [37], sending it to elastic: Thread id 28
+2021-10-20 20:04:07 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2433651774], partitions [0] and offsets [42], sending it to elastic: Thread id 26
+2021-10-20 20:04:08 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1185701771886379014], partitions [1] and offsets [38], sending it to elastic: Thread id 28
+2021-10-20 20:04:12 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1347535351506554881], partitions [2] and offsets [34], sending it to elastic: Thread id 30
+2021-10-20 20:04:17 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1250164632968298497], partitions [1] and offsets [39], sending it to elastic: Thread id 28
+2021-10-20 20:04:18 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1409076550675357699], partitions [1] and offsets [40], sending it to elastic: Thread id 28
+2021-10-20 20:04:19 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [14180249], partitions [0] and offsets [43], sending it to elastic: Thread id 26
+2021-10-20 20:04:20 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1386608384258953219], partitions [2] and offsets [35], sending it to elastic: Thread id 30
+2021-10-20 20:04:25 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1278812593658966016], partitions [1] and offsets [41], sending it to elastic: Thread id 28
+2021-10-20 20:04:26 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1361371224912392197], partitions [0] and offsets [44], sending it to elastic: Thread id 26
+2021-10-20 20:04:27 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1250847803389116416], partitions [2] and offsets [36], sending it to elastic: Thread id 30
+2021-10-20 20:04:27 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1198395186147184640], partitions [2] and offsets [37], sending it to elastic: Thread id 30
+2021-10-20 20:04:27 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [980982359079219200], partitions [0] and offsets [45], sending it to elastic: Thread id 26
+2021-10-20 20:04:30 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2236852344], partitions [1] and offsets [42], sending it to elastic: Thread id 28
+2021-10-20 20:04:41 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1419332726109478914], partitions [0] and offsets [46], sending it to elastic: Thread id 26
+2021-10-20 20:04:42 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [816781998], partitions [2] and offsets [38], sending it to elastic: Thread id 30
+2021-10-20 20:04:46 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1038157344868200448], partitions [2] and offsets [39], sending it to elastic: Thread id 30
+2021-10-20 20:04:51 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [152194629], partitions [0] and offsets [47], sending it to elastic: Thread id 26
+2021-10-20 20:05:06 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1367656120739762185], partitions [2] and offsets [40], sending it to elastic: Thread id 30
+2021-10-20 20:05:06 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [3305295079], partitions [1] and offsets [43], sending it to elastic: Thread id 28
+2021-10-20 20:05:07 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [85917264], partitions [2] and offsets [41], sending it to elastic: Thread id 30
+2021-10-20 20:05:18 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1341310178776346626], partitions [0] and offsets [48], sending it to elastic: Thread id 26
+2021-10-20 20:05:21 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1448999191527759872], partitions [0] and offsets [49], sending it to elastic: Thread id 26
+2021-10-20 20:05:30 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2511321800], partitions [0] and offsets [50], sending it to elastic: Thread id 26
+2021-10-20 20:05:31 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [473433358], partitions [1] and offsets [44], sending it to elastic: Thread id 28
+2021-10-20 20:05:39 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1353995090696409088], partitions [1] and offsets [45], sending it to elastic: Thread id 28
+2021-10-20 20:05:45 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1729193269], partitions [1] and offsets [46], sending it to elastic: Thread id 28
+2021-10-20 20:05:50 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [966322544382042112], partitions [2] and offsets [42], sending it to elastic: Thread id 30
+2021-10-20 20:05:56 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1039142620331732993], partitions [0] and offsets [51], sending it to elastic: Thread id 26
+2021-10-20 20:05:58 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1428347863503802374], partitions [2] and offsets [43], sending it to elastic: Thread id 30
+2021-10-20 20:06:07 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2433651774], partitions [0] and offsets [52], sending it to elastic: Thread id 26
+2021-10-20 20:06:08 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1375961552122044417], partitions [2] and offsets [44], sending it to elastic: Thread id 30
+2021-10-20 20:06:08 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [188262540], partitions [2] and offsets [45], sending it to elastic: Thread id 30
+2021-10-20 20:06:09 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2273374034], partitions [2] and offsets [46], sending it to elastic: Thread id 30
+2021-10-20 20:06:13 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1094329850389770246], partitions [0] and offsets [53], sending it to elastic: Thread id 26
+2021-10-20 20:06:18 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [141623171], partitions [2] and offsets [47], sending it to elastic: Thread id 30
+2021-10-20 20:06:24 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1325243483867639810], partitions [1] and offsets [47], sending it to elastic: Thread id 28
+2021-10-20 20:06:29 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [29476424], partitions [2] and offsets [48], sending it to elastic: Thread id 30
+2021-10-20 20:06:31 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1145406994498691073], partitions [0] and offsets [54], sending it to elastic: Thread id 26
+2021-10-20 20:06:33 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1410724867406635013], partitions [2] and offsets [49], sending it to elastic: Thread id 30
+2021-10-20 20:06:42 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [331967071], partitions [2] and offsets [50], sending it to elastic: Thread id 30
+2021-10-20 20:06:46 [twitterTopicListener-2-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [4431440237], partitions [2] and offsets [51], sending it to elastic: Thread id 30
+2021-10-20 20:06:49 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2888727171], partitions [1] and offsets [48], sending it to elastic: Thread id 28
+2021-10-20 20:06:58 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1416065179603722242], partitions [1] and offsets [49], sending it to elastic: Thread id 28
+2021-10-20 20:06:59 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [236975880], partitions [0] and offsets [55], sending it to elastic: Thread id 26
+2021-10-20 20:07:01 [twitterTopicListener-0-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [990200869], partitions [0] and offsets [56], sending it to elastic: Thread id 26
+2021-10-20 20:07:03 [twitterTopicListener-1-C-1] INFO  i.c.m.i.k.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1256781912821006336], partitions [1] and offsets [50], sending it to elastic: Thread id 28

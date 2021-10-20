@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zeev512/spring-cloud-config-server-repository
+          default-label: master
+          username: zeev512
+          # Replace the token with asterisks on each commit, then put it back after commit to GitHub.
+          # Otherwise the GitHub will delete the token upon commit.
+          password: '****'
+          # zeev_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_zeev
+          clone-on-start: true
+    fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: '{cipher}c0d85293cb01a46b3b629a12e5620f4e9d00d4ede8bdf248cf5b83e23f4536501e4b34a8d56b7a34fcee17aa01d05330'
+
+log:
+  app-name: config-server
