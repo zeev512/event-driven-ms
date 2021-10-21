@@ -13,7 +13,8 @@
 		<module>common-config</module>
 		<module>config-server</module>
 		<module>kafka-elastic-service</module>
-	</modules>
+        <module>elastic</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -95,6 +96,11 @@
 				<artifactId>kafka-producer</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>il.co.migdal.ins</groupId>
+				<artifactId>elastic-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
@@ -157,7 +163,11 @@
 				<artifactId>spring-boot-starter-webflux</artifactId>
 				<version>${spring-boot.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.twitter4j</groupId>
 				<artifactId>twitter4j-stream</artifactId>
@@ -177,6 +187,17 @@
 				<version>${avro.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.elasticsearch</groupId>
+				<artifactId>elasticsearch</artifactId>
+				<version>${elastic.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.elasticsearch.client</groupId>
+				<artifactId>elasticsearch-rest-high-level-client</artifactId>
+				<version>${elastic.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>io.confluent</groupId>

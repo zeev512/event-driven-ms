@@ -36,14 +36,21 @@ retry-config:
   maxAttempts: 3
   sleep-time-ms: 2000
 
-kafka-producer-config:
-  key-serializer-class: org.apache.kafka.common.serialization.LongSerializer
-  value-serializer-class: io.confluent.kafka.serializers.KafkaAvroSerializer
-  compression-type: snappy
-  acks: all
-  batch-size: 16384
-  batch-size-boost-factor: 100
-  linger-ms: 5
-  request-timeout-ms: 60000
-  retry-count: 5
+# This should be loaded through KafkaProducerConfigData class
+#kafka-producer-config:
+#  key-serializer-class: org.apache.kafka.common.serialization.LongSerializer
+#  value-serializer-class: io.confluent.kafka.serializers.KafkaAvroSerializer
+#  compression-type: snappy
+#  acks: all
+#  batch-size: 16384
+#  batch-size-boost-factor: 100
+#  linger-ms: 5
+#  request-timeout-ms: 60000
+#  retry-count: 5
 
+elastic-config:
+  index-name: twitter-index
+  connection-url: http://localhost:9200
+  connect-timeout-ms: 5000
+  socket-timeout-ms: 30000
+  is-repository: true
