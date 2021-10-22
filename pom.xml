@@ -14,7 +14,10 @@
 		<module>config-server</module>
 		<module>kafka-elastic-service</module>
         <module>elastic</module>
-    </modules>
+        <module>common-util</module>
+		<module>elastic-query-service</module>
+		<module>elastic-query-service-common</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -78,6 +81,11 @@
 			</dependency>
 			<dependency>
 				<groupId>il.co.migdal.ins</groupId>
+				<artifactId>common-util</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>il.co.migdal.ins</groupId>
 				<artifactId>common-config</artifactId>
 				<version>${project.version}</version>
 			</dependency>
@@ -109,6 +117,11 @@
 			<dependency>
 				<groupId>il.co.migdal.ins</groupId>
 				<artifactId>elastic-index-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>il.co.migdal.ins</groupId>
+				<artifactId>elastic-query-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
@@ -208,7 +221,11 @@
 				<artifactId>elasticsearch-rest-high-level-client</artifactId>
 				<version>${elastic.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-ui</artifactId>
+				<version>${springdoc-openapi-ui.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>io.confluent</groupId>
 				<artifactId>kafka-avro-serializer</artifactId>
