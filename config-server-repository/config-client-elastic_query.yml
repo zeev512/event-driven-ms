@@ -12,6 +12,8 @@ elastic-config:
   connect-timeout-ms: 5000
   socket-timeout-ms: 30000
 
+# [zeev@localhost ~]$ spring decrypt baeb90d57edb9a050b97b98a7d8cabe80ee884e6fff16c22956172459a43e54d --key 'Demo_Pwd!2020'
+# test1234
 user-config:
   username: test
   password: '{cipher}baeb90d57edb9a050b97b98a7d8cabe80ee884e6fff16c22956172459a43e54d'

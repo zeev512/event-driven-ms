@@ -16,8 +16,7 @@
         <module>elastic</module>
         <module>common-util</module>
 		<module>elastic-query-service</module>
-		<module>elastic-query-service-common</module>
-	</modules>
+		</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
