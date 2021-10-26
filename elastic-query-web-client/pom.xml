@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>elastiic-query-web-client</artifactId>
+    <artifactId>elastic-query-web-client</artifactId>
 
     <dependencies>
         <dependency>

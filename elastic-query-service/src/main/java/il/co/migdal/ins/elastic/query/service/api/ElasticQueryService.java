@@ -1,6 +1,6 @@
 package il.co.migdal.ins.elastic.query.service.api;
 
-import il.co.migdal.ins.elastic.query.model.ElasticQueryServiceResponseModel;
+import il.co.migdal.ins.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 
 import java.util.List;
 

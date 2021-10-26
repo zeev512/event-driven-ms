@@ -1,9 +1,9 @@
 package il.co.migdal.ins.elastic.query.rest;
 
-import il.co.migdal.ins.elastic.query.model.ElasticQueryServiceRequestModel;
-import il.co.migdal.ins.elastic.query.model.ElasticQueryServiceResponseModel;
 import il.co.migdal.ins.elastic.query.model.ElasticQueryServiceResponseModelV2;
 import il.co.migdal.ins.elastic.query.service.api.ElasticQueryService;
+import il.co.migdal.ins.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
+import il.co.migdal.ins.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

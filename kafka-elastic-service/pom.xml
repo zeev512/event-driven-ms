@@ -14,14 +14,6 @@
     <dependencies>
         <dependency>
             <groupId>il.co.migdal.ins</groupId>
-            <artifactId>kafka-admin</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>il.co.migdal.ins</groupId>
-            <artifactId>kafka-consumer</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>il.co.migdal.ins</groupId>
             <artifactId>elastic-model</artifactId>
         </dependency>
         <dependency>
@@ -32,10 +24,29 @@
             <groupId>il.co.migdal.ins</groupId>
             <artifactId>elastic-index-client</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>il.co.migdal.ins</groupId>
+            <artifactId>kafka-consumer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>il.co.migdal.ins</groupId>
+            <artifactId>kafka-admin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>il.co.migdal.ins</groupId>
+            <artifactId>kafka-model</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -45,21 +56,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.confluent</groupId>
-            <artifactId>kafka-avro-serializer</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -83,5 +79,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

@@ -2,7 +2,8 @@ package il.co.migdal.ins.elastic.query.model;
 
 import il.co.migdal.ins.elastic.model.index.impl.TwitterIndexModel;
 import il.co.migdal.ins.elastic.query.rest.ElasticDocumentController;
-import il.co.migdal.ins.elastic.query.transformer.ElasticToResponseModelTransformer;
+import il.co.migdal.ins.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
+import il.co.migdal.ins.elastic.query.service.common.transformer.ElasticToResponseModelTransformer;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 
