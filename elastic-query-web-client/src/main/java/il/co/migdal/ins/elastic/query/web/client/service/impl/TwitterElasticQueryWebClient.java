@@ -1,10 +1,10 @@
 package il.co.migdal.ins.elastic.query.web.client.service.impl;
 
+import il.co.migdal.ins.elastic.query.web.client.common.ElasticQueryWebClientException;
+import il.co.migdal.ins.elastic.query.web.client.common.model.ElasticQueryWebClientRequestModel;
+import il.co.migdal.ins.elastic.query.web.client.common.model.ElasticQueryWebClientResponseModel;
 import il.co.migdal.ins.kafka.config.ElasticQueryWebClientConfigData;
-import il.co.migdal.ins.elastic.query.web.client.service.impl.ElasticQueryWebClientException;
-import il.co.migdal.ins.elastic.query.web.client.model.ElasticQueryWebClientRequestModel;
-import il.co.migdal.ins.elastic.query.web.client.model.ElasticQueryWebClientResponseModel;
-import il.co.migdal.ins.elastic.query.web.client.service.ElasticQueryWebClient;
+import il.co.migdal.ins.elastic.query.web.client.service.api.ElasticQueryWebClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,7 +1,7 @@
 package il.co.migdal.ins.analytics.service.dataaccess.repository.impl;
 
 import il.co.migdal.ins.analytics.service.dataaccess.entity.BaseEntity;
-import il.co.migdal.ins.analytics.service.dataaccess.repository.AnalyticsCustomRepository;
+import il.co.migdal.ins.analytics.service.dataaccess.repository.api.AnalyticsCustomRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
