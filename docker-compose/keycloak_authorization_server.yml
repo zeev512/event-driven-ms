@@ -28,13 +28,22 @@ volumes:
 
 services:
   postgres:
-    image: postgres
+    image: postgres:14
+    restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      # copy the sql script to create tables
+      - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
     environment:
       - "POSTGRES_DB=keycloak"
       - "POSTGRES_USER=keycloak"
       - "POSTGRES_PASSWORD=keycloak"
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - '5438:5432'
   keycloak-authorization-server:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-latest}
     hostname: keycloak-server
