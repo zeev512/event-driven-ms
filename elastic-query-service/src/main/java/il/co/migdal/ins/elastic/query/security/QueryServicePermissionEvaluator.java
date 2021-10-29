@@ -3,7 +3,6 @@ package il.co.migdal.ins.elastic.query.security;
 import il.co.migdal.ins.elastic.query.model.ElasticQueryServiceAnalyticsResponseModel;
 import il.co.migdal.ins.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
 import il.co.migdal.ins.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
-// import il.co.migdal.ins.elastic.query.service.model.ElasticQueryServiceAnalyticsResponseModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
