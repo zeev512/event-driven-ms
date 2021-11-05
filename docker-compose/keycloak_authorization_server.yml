@@ -28,7 +28,7 @@ volumes:
 
 services:
   postgres:
-    image: postgres:14
+    image: postgres
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -43,7 +43,7 @@ services:
         max-size: 10m
         max-file: "3"
     ports:
-      - '5438:5432'
+      - '5432:5432'
   keycloak-authorization-server:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-latest}
     hostname: keycloak-server

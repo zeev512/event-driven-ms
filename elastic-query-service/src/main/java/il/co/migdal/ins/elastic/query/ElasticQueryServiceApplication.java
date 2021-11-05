@@ -1,4 +1,4 @@
-package il.co.migdal.ins.elastic.query.service;
+package il.co.migdal.ins.elastic.query;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
